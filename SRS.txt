@@ -1,0 +1,16 @@
+SRS
+
+Title: Space Repetation
+
+Objective: Web site which help me in remembering studied material. Web site will ask me question before I forgot studied material.
+
+Scope: If I am able to answer then it will ask same question after double the time interval choosen from option. If I am not able
+to answer the question then it will ask question after time interval choosen from option.
+
+Functional Requirement: 
+1. Login system
+2. Register system
+3. Email verification
+4. Store question and answer
+5. Record time of question ask
+6. Algorithm to ask question after user given input

@@ -1,0 +1,34 @@
+SQL TABLE
+1)user info, username and password(id, username, password, email, firstName, lastName)
+2)list of module(id, moduleName, count of template)
+3)template(id, moduleName, moduleNumber, name, question, answer)
+4)log(id, username, moduleName, moduleNumber, date, time)
+
+DB
+users (username, password, firstName, lastName, email, photo)
+
+module(moduleName, templateCount)
+
+template(moduleName, tamplateName, question, answer)
+
+Java class
+User
+(username, password, firstName, lastName, email, photo)
+{login user, register user, verify user}
+
+module
+(moduleName, templateCount)
+{showQuestion,recentlyAttempt,nextQuestion(username)}
+
+Template
+(moduleName, tamplateName, question, answer)
+{numberOfTimeQuestionAsk(username),whenToAskQuestionAfterThisTimeOption()}
+
+UI
+home
+login
+register
+profile
+template list
+question interface
+

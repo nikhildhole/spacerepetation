@@ -1,0 +1,6 @@
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /spacerepetition/
+    RewriteRule ^index\.php$ - [L]
+    RewriteRule (.*) /spacerepetition/index.php?url=%{REQUEST_URI} [QSA,L]
+</ifModule>
