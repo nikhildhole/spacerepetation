@@ -1,5 +1,5 @@
 <?php
-require_once('DB.php');
+include 'DB.php';
 class User{
     private $userName;
     private $password;
@@ -31,14 +31,14 @@ class User{
     function getIsActive(){}
 
     static function isUserNamePresent($userName){
-        $conn = new DB();
-        $conn = $conn->getConnect();
-        $stmt = $conn->prepare("SELECT 'a' FROM Users where username = ?");
-        $result = $stmt->setFetchMode(PDO::FETCH_NUM);
-        //$result = $stmt->execute([$userName]);
-        foreach ($stmt as $row) {
-            print $row[0];
+        $result = $connection->prepare("SELECT username FROM Users where username =". $userName."';");
+        $result->execute();
+        if($result = $stmt->setFetchMode(PDO::FETCH_ASSOC) ){
+            return true;
+        }else{
+            return false;
         }
+        $row = $result->fetch_assoc();
     }
 }
 User::isUserNamePresent('a');
