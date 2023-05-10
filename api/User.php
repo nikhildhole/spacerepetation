@@ -17,6 +17,9 @@ class User{
         }
         $row = $result->fetch_assoc();
     }
+    static function insert(){}
+    static function delete(){}
+    static function update(){}
 }
 User::isUserNamePresent('a');
 ?>
