@@ -1,34 +1,11 @@
 <?php
 include 'DB.php';
 class User{
-    private $userName;
-    private $password;
-    private $firstName;
-    private $lastName;
-    private $email;
-    private $photo;
-    private $time;
-    private $isActive;
-
-    function __construct($userName, $password, $firstName, $lastName, $email, $photo=null){
-
+    $DB;
+    
+    function __User(){
+        $DB = new DB();
     }
-
-    function getUserName(){}
-
-    function setPassword(){}
-
-    function getFirstName(){}
-
-    function getLastName(){}
-
-    function getEmail(){}
-
-    function getPhoto(){}
-
-    function getTime(){}
-
-    function getIsActive(){}
 
     static function isUserNamePresent($userName){
         $result = $connection->prepare("SELECT username FROM Users where username =". $userName."';");
